@@ -9,7 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var backgroundColorView: UIView!
+    @IBOutlet weak var backgroundColorView: UIView!
+    @IBOutlet weak var redValueLabel: UILabel!
+    @IBOutlet weak var greenValueLabel: UILabel!
+    @IBOutlet weak var blueValueLabel: UILabel!
     
     @IBAction func changeColorTapped(_ sender: UIButton) {
         backgroundColorView.backgroundColor = generateRandomColor()
@@ -20,7 +23,15 @@ class ViewController: UIViewController {
         let green = CGFloat.random(in: 0...1)
         let blue = CGFloat.random(in: 0...1)
         
+        changeRGBLabel(red: red, green: green, blue: blue)
+        
         return UIColor(red: red, green: green, blue: blue, alpha: 1)
+    }
+    
+    func changeRGBLabel(red: CGFloat, green: CGFloat, blue: CGFloat) {
+        redValueLabel.text = String(Int(red * 255))
+        greenValueLabel.text = String(Int(green * 255))
+        blueValueLabel.text = String(Int(blue * 255))
     }
     
     override func viewDidLoad() {
