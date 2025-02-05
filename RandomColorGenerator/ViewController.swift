@@ -18,6 +18,12 @@ class ViewController: UIViewController {
         backgroundColorView.backgroundColor = generateRandomColor()
     }
     
+    @IBAction func resetTapped(_ sender: UIButton) {
+        backgroundColorView.backgroundColor = .white
+        
+        changeRGBLabel(red: 1, green: 1, blue: 1)
+    }
+    
     func generateRandomColor() -> UIColor {
         let red = CGFloat.random(in: 0...1)
         let green = CGFloat.random(in: 0...1)
