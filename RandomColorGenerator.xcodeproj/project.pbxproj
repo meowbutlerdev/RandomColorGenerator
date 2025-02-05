@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BF310A082D5356F200A6B786 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BF310A072D5356EE00A6B786 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BF3109E92D5341CC00A6B786 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		BF3109D22D5341CB00A6B786 /* RandomColorGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColorGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3109E82D5341CC00A6B786 /* RandomColorGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomColorGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3109F22D5341CD00A6B786 /* RandomColorGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomColorGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF310A072D5356EE00A6B786 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -56,6 +61,11 @@
 		BF3109F52D5341CD00A6B786 /* RandomColorGeneratorUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = RandomColorGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		BF310A092D5357A600A6B786 /* image */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -88,6 +98,8 @@
 		BF3109C92D5341CB00A6B786 = {
 			isa = PBXGroup;
 			children = (
+				BF310A092D5357A600A6B786 /* image */,
+				BF310A072D5356EE00A6B786 /* README.md */,
 				BF3109D42D5341CB00A6B786 /* RandomColorGenerator */,
 				BF3109EB2D5341CC00A6B786 /* RandomColorGeneratorTests */,
 				BF3109F52D5341CD00A6B786 /* RandomColorGeneratorUITests */,
@@ -122,6 +134,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				BF3109D42D5341CB00A6B786 /* RandomColorGenerator */,
+				BF310A092D5357A600A6B786 /* image */,
 			);
 			name = RandomColorGenerator;
 			packageProductDependencies = (
@@ -225,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF310A082D5356F200A6B786 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
