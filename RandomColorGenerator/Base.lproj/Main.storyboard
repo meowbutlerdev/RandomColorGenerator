@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-BT-oER">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-BT-oER">
                                 <rect key="frame" x="65" y="494" width="135" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -29,9 +28,8 @@
                                     <action selector="changeColorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHk-j0-dYt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJL-51-CEF">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJL-51-CEF">
                                 <rect key="frame" x="260" y="494" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -42,9 +40,8 @@
                                     <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k0E-Gd-46O"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R: 255, G: 255, B: 255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYh-ct-ftz">
-                                <rect key="frame" x="96" y="401" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R: 255, G: 255, B: 255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYh-ct-ftz">
+                                <rect key="frame" x="107.66666666666667" y="428.33333333333331" width="177.66666666666663" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,6 +49,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JZy-ir-558"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RYh-ct-ftz" firstAttribute="centerX" secondItem="JZy-ir-558" secondAttribute="centerX" id="061-h1-QSX"/>
+                            <constraint firstItem="ZJL-51-CEF" firstAttribute="leading" secondItem="Ed3-BT-oER" secondAttribute="trailing" constant="60" id="P49-hk-HVS"/>
+                            <constraint firstItem="RYh-ct-ftz" firstAttribute="centerY" secondItem="JZy-ir-558" secondAttribute="centerY" id="TlP-ZZ-v5j"/>
+                            <constraint firstItem="ZJL-51-CEF" firstAttribute="leading" secondItem="RYh-ct-ftz" secondAttribute="trailing" constant="-25.333333333333314" id="ccz-SO-ZwT"/>
+                            <constraint firstItem="Ed3-BT-oER" firstAttribute="top" secondItem="RYh-ct-ftz" secondAttribute="bottom" constant="45.333333333333371" id="cz1-D5-vDm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundColorView" destination="ybk-sP-NyA" id="BaD-U5-0Sv"/>
