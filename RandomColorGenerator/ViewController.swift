@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var backgroundColorView: UIView!
     @IBOutlet weak var rgbValueLabel: UILabel!
+    @IBOutlet weak var changeColorButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     
     @IBAction func changeColorTapped(_ sender: UIButton) {
         backgroundColorView.backgroundColor = generateRandomColor()
@@ -19,7 +21,7 @@ class ViewController: UIViewController {
     @IBAction func resetTapped(_ sender: UIButton) {
         backgroundColorView.backgroundColor = .white
         
-        changeRGBLabel(red: 1, green: 1, blue: 1)
+        chagneRGB(red: 1, green: 1, blue: 1)
     }
     
     func generateRandomColor() -> UIColor {
@@ -27,14 +29,24 @@ class ViewController: UIViewController {
         let green = CGFloat.random(in: 0...1)
         let blue = CGFloat.random(in: 0...1)
         
-        changeRGBLabel(red: red, green: green, blue: blue)
+        chagneRGB(red: red, green: green, blue: blue)
         
         return UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
     
-    func changeRGBLabel(red: CGFloat, green: CGFloat, blue: CGFloat) {
+    func chagneRGB(red: CGFloat, green: CGFloat, blue: CGFloat) {
+        let luminance = relativeLuminance(red: red, green: green, blue: blue)
+        let textColor: UIColor = (luminance < 0.5) ? .white : .black
+        let buttonBackgroundColor: UIColor = (luminance < 0.5) ? .lightGray : .darkGray
+        
         rgbValueLabel.text = "R: \(Int(red * 255)), G: \(Int(green * 255)), B: \(Int(blue * 255))"
-        rgbValueLabel.textColor = (relativeLuminance(red: red, green: green, blue: blue) < 0.5) ? .white : .black
+        rgbValueLabel.textColor = textColor
+        
+        changeColorButton.setTitleColor(textColor, for: .normal)
+        changeColorButton.backgroundColor = buttonBackgroundColor
+        
+        resetButton.setTitleColor(textColor, for: .normal)
+        resetButton.backgroundColor = buttonBackgroundColor
     }
     
     func gammaCorrection(value: CGFloat) -> CGFloat {
@@ -53,4 +65,3 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 }
-
