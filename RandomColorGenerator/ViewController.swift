@@ -10,9 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var backgroundColorView: UIView!
-    @IBOutlet weak var redValueLabel: UILabel!
-    @IBOutlet weak var greenValueLabel: UILabel!
-    @IBOutlet weak var blueValueLabel: UILabel!
+    @IBOutlet weak var rgbValueLabel: UILabel!
     
     @IBAction func changeColorTapped(_ sender: UIButton) {
         backgroundColorView.backgroundColor = generateRandomColor()
@@ -35,9 +33,20 @@ class ViewController: UIViewController {
     }
     
     func changeRGBLabel(red: CGFloat, green: CGFloat, blue: CGFloat) {
-        redValueLabel.text = String(Int(red * 255))
-        greenValueLabel.text = String(Int(green * 255))
-        blueValueLabel.text = String(Int(blue * 255))
+        rgbValueLabel.text = "R: \(Int(red * 255)), G: \(Int(green * 255)), B: \(Int(blue * 255))"
+        rgbValueLabel.textColor = (relativeLuminance(red: red, green: green, blue: blue) < 0.5) ? .white : .black
+    }
+    
+    func gammaCorrection(value: CGFloat) -> CGFloat {
+        return (value <= 0.03928) ? (value / 12.92) : pow((value + 0.055) / 1.055, 2.4)
+    }
+    
+    func relativeLuminance(red: CGFloat, green: CGFloat, blue: CGFloat) -> CGFloat {
+        let r = gammaCorrection(value: red)
+        let g = gammaCorrection(value: green)
+        let b = gammaCorrection(value: blue)
+        
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b
     }
     
     override func viewDidLoad() {
