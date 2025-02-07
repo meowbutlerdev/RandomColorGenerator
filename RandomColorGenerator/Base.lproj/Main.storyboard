@@ -16,21 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-BT-oER">
-                                <rect key="frame" x="65" y="494" width="135" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJL-51-CEF">
+                                <rect key="frame" x="228" y="498.66666666666674" width="135" height="35"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Change Color">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeColorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHk-j0-dYt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJL-51-CEF">
-                                <rect key="frame" x="260" y="494" width="71" height="35"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Iby-RP-GQ2"/>
+                                    <constraint firstAttribute="height" constant="35" id="lqb-uB-w68"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Reset">
@@ -46,15 +38,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-BT-oER">
+                                <rect key="frame" x="43" y="498.66666666666674" width="135" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="ooW-nc-VfJ"/>
+                                    <constraint firstAttribute="height" constant="35" id="sSz-ed-CxC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Change Color">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHk-j0-dYt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JZy-ir-558"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RYh-ct-ftz" firstAttribute="centerX" secondItem="JZy-ir-558" secondAttribute="centerX" id="061-h1-QSX"/>
-                            <constraint firstItem="ZJL-51-CEF" firstAttribute="leading" secondItem="Ed3-BT-oER" secondAttribute="trailing" constant="60" id="P49-hk-HVS"/>
+                            <constraint firstItem="ZJL-51-CEF" firstAttribute="leading" secondItem="Ed3-BT-oER" secondAttribute="trailing" constant="50" id="L0H-FM-0Te"/>
                             <constraint firstItem="RYh-ct-ftz" firstAttribute="centerY" secondItem="JZy-ir-558" secondAttribute="centerY" id="TlP-ZZ-v5j"/>
-                            <constraint firstItem="ZJL-51-CEF" firstAttribute="leading" secondItem="RYh-ct-ftz" secondAttribute="trailing" constant="-25.333333333333314" id="ccz-SO-ZwT"/>
-                            <constraint firstItem="Ed3-BT-oER" firstAttribute="top" secondItem="RYh-ct-ftz" secondAttribute="bottom" constant="45.333333333333371" id="cz1-D5-vDm"/>
+                            <constraint firstItem="Ed3-BT-oER" firstAttribute="top" secondItem="RYh-ct-ftz" secondAttribute="bottom" constant="50" id="cz1-D5-vDm"/>
+                            <constraint firstItem="Ed3-BT-oER" firstAttribute="leading" secondItem="JZy-ir-558" secondAttribute="leading" constant="43" id="g7H-Mm-uvu"/>
+                            <constraint firstItem="ZJL-51-CEF" firstAttribute="top" secondItem="RYh-ct-ftz" secondAttribute="bottom" constant="50" id="iSc-sk-rds"/>
                         </constraints>
                     </view>
                     <connections>
